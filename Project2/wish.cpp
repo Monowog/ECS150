@@ -19,14 +19,10 @@ void parseCommand(char* input, int args){
 
 	if(strcmp(token, "exit") == 0){
 	
-		if(args > 1){
-		
-			write(STDERR_FILENO, error_message, strlen(error_message));
-			
+		if(args > 1){	
+			write(STDERR_FILENO, error_message, strlen(error_message));	
 		} else {
-		
 			exit(0); 
-			
 		}
 		
 	} else if (strcmp(token, "cd") == 0 && args == 2){
